@@ -1,0 +1,119 @@
+.error_message {
+    color: rgb(252, 48, 48);
+    margin-top: 3px;
+    font-size: 14px;
+
+    @media (max-width: 1199px) {
+        font-size: 13px;
+    }
+
+    @media (max-width: 991px) {
+        font-size: 12px;
+    }
+}
+
+label {
+    &.form-label {
+        display: flex;
+        margin-bottom: 6px;
+        font-weight: 500;
+        font-size: 16px;
+        width: 100%;
+
+        .labelIcon {
+            margin-left: 6px;
+        }
+
+        @media (max-width: 1199px) {
+            font-size: 14px;
+        }
+
+    }
+}
+
+.common_input {
+    position: relative;
+
+    &_inner {
+        position: relative;
+        height: 54px;
+
+        .leftIcon {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: inline-flex;
+            background-color: transparent;
+
+            &.btn {
+                cursor: pointer;
+            }
+        }
+
+        .rightIcon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 20px;
+            background-color: transparent;
+            display: inline-flex;
+
+            &.btn {
+                cursor: pointer;
+            }
+
+            @media (max-width: 991px) {
+                right: 12px;
+
+                svg {
+                    max-width: 15px;
+                }
+            }
+        }
+
+        input,
+        textarea {
+            height: 100%;
+            width: 100%;
+            border-radius: 10px;
+            border: 1px solid;
+            font-size: 16px;
+            padding: 0 20px;
+
+            &:focus {
+                border: 1px solid;
+                box-shadow: none;
+            }
+
+        }
+
+        @media (max-width: 991px) {
+            height: 44px;
+
+            input {
+                font-size: 14px;
+            }
+        }
+
+        &.rightIconInput {
+            input {
+                padding-right: 45px;
+
+                @media (max-width: 991px) {
+                    padding-right: 40px;
+                }
+            }
+        }
+
+        &.leftIconInput {
+            input {
+                padding-left: 45px;
+            }
+        }
+    }
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
